@@ -36,10 +36,11 @@ function initApplication () {
 		}
 	});
 	$(document).on('pagebeforecreate orientationchange', updateIcons);
-	$('#image-page').live('pageshow', Image.capture);
-	$('#compass-page').live('pageshow', Compass.init);
-	$('#map-page').live(
+	$(document).on('pageshow', '#image-page', Image.capture);
+	$(document).on('pageshow', '#compass-page', Compass.init);
+	$(document).on(
 			'pageshow',
+			'#map-page',
 			function () {
 				var geolocationOptions = {
 					timeout: 15 * 1000, // 15 seconds
