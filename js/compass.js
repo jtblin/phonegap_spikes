@@ -6,7 +6,7 @@ var Compass = {
 	onSuccess: function (heading) {
 		$.mobile.loading('hide');
 		$('#heading').html(heading);
-		navigator.notification.alert("Compass success.", null, 'Uh oh!');
+		navigator.notification.alert("Compass success, heading: " + heading, null, 'Uh oh!');
 	},
 	onError: function (code) {
 		$.mobile.loading('hide');
