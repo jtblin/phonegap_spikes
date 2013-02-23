@@ -36,6 +36,7 @@ function initApplication () {
 		}
 	});
 	$(document).on('pagebeforecreate orientationchange', updateIcons);
+	$('#image-page').live('pageshow', Image.capture);
 	$('#map-page').live(
 			'pageshow',
 			function () {
