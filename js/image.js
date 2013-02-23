@@ -2,14 +2,23 @@ var Image = {
 	capture: function () {
 		// Launch device camera application,
 		// allowing user to capture one image
-		navigator.camera.getPicture(Image.captureSuccess, Image.captureError, {quality: 50});
+		navigator.camera.getPicture(Image.captureSuccess, Image.captureError, Image.captureOptions);
 	},
-	captureSuccess: function (imageData) {
-		$('#smallImage').attr('src', "data:image/jpeg;base64," + imageData);
+	captureSuccess: function (imageUri) {
+		$('#smallImage').attr('src', imageUri);
 		$('#smallImage').removeClass('hide');
 	},
 	captureError: function (msg) {
 		navigator.notification.alert(msg, null, 'Uh oh!');
+	},
+	captureOptions: { 
+		quality : 75, 
+	  destinationType : Camera.DestinationType.DATA_URL, 
+	  sourceType : Camera.PictureSourceType.CAMERA, 
+	  allowEdit : true,
+	  encodingType: Camera.EncodingType.PNG,
+	  targetWidth: 60,
+	  targetHeight: 60 
 	}
 };
 
