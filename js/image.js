@@ -15,8 +15,6 @@ var Image = {
 		quality : 75, 
 	  destinationType : Camera.DestinationType.DATA_URL, 
 	  sourceType : Camera.PictureSourceType.CAMERA, 
-	  allowEdit : true,
-	  encodingType: Camera.EncodingType.PNG,
 	  targetWidth: 60,
 	  targetHeight: 60 
 	}
