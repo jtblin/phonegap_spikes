@@ -6,7 +6,7 @@
     <name>Spikes</name>
     <description>This is a spike for testing phonegap geo location. More to come later.</description>
     <author href="http://au.linkedin.com/in/jtblin" email="jtblin@gmail.com">Jerome Touffe-Blin</author>
-    <icon src="icon.jpeg" gap:role="default" />
+    <icon src="icon.png" gap:role="default" />
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
     <preference name="phonegap-version" value="2.4.0" />
