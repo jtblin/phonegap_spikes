@@ -5,11 +5,11 @@ var Compass = {
 	},
 	onSuccess: function (heading) {
 		$.mobile.loading('hide');
-		$('#heading').html(heading);
-		navigator.notification.alert("Compass success, heading: " + heading, null, 'Uh oh!');
+		$('#heading').html(heading.magneticHeading);
+		navigator.notification.alert("Compass success, heading: " + heading.magneticHeading, null, 'Uh oh!');
 	},
-	onError: function (code) {
+	onError: function (compassError) {
 		$.mobile.loading('hide');
-		navigator.notification.alert("Cannot get heading. Error: " + code, null, 'Uh oh!');
+		navigator.notification.alert("Compass error: " + compassError.code, null, 'Uh oh!');
 	}
 };
