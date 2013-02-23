@@ -7,3 +7,13 @@ Geo location
 ------------
 
 This first spike retrieves geo location coordinates via the phone GPS, get the corresponding address from Google Map Geocoder, and display the user location on Google Maps.
+
+Get picture
+-----------
+
+Starts camera, and display picture taken on the page.
+
+Compass
+-------
+
+Show direction where the phone is heading to.
