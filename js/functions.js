@@ -37,6 +37,7 @@ function initApplication () {
 	});
 	$(document).on('pagebeforecreate orientationchange', updateIcons);
 	$('#image-page').live('pageshow', Image.capture);
+	$('#compass-page').live('pageshow', Compass.init);
 	$('#map-page').live(
 			'pageshow',
 			function () {
