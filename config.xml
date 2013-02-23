@@ -9,7 +9,7 @@
     <icon src="icon.png" gap:role="default" />
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
-		<feature name="http://api.phonegap.com/1.0/capture"/>
+		<feature name="http://api.phonegap.com/1.0/camera"/>
     <preference name="phonegap-version" value="2.3.0" />
     <preference name="target-device" value="universal" />
     <!-- Splash Screens -->
