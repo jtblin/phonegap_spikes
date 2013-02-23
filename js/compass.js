@@ -5,8 +5,9 @@ var Compass = {
 	},
 	onSuccess: function (heading) {
 		$.mobile.loading('hide');
-		$('#heading').html(heading.magneticHeading);
-//		navigator.notification.alert("Compass success, heading: " + heading.magneticHeading, null, 'Uh oh!');
+		var newHeading = Math.round(heading.magneticHeading);
+		$('#heading').html(newHeading + "&deg;");
+		$('#compass').css('-webkit-transform', 'rotate(' + 360 - newHeading + 'deg)');
 	},
 	onError: function (compassError) {
 		$.mobile.loading('hide');
