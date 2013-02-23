@@ -7,7 +7,8 @@ var Compass = {
 		$.mobile.loading('hide');
 		var newHeading = Math.round(heading.magneticHeading);
 		$('#heading').html(newHeading + "&deg;");
-		$('#compass').css('-webkit-transform', 'rotate(' + 360 - newHeading + 'deg)');
+		// TODO: fix - this code only works on webkit browsers, not wp7
+		$('#compass').css('-webkit-transform', 'rotate(' + (360 - newHeading) + 'deg)');
 	},
 	onError: function (compassError) {
 		$.mobile.loading('hide');
