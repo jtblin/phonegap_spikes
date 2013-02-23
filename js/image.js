@@ -13,7 +13,7 @@ var Image = {
 	},
 	captureOptions: { 
 		quality : 75, 
-	  destinationType : Camera.DestinationType.DATA_URL, 
+	  destinationType : Camera.DestinationType.FILE_URI, 
 	  sourceType : Camera.PictureSourceType.CAMERA, 
 	  targetWidth: 60,
 	  targetHeight: 60 
