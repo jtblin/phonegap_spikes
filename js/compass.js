@@ -1,7 +1,9 @@
-var Compass = {
+var PGS = PGS || {};
+
+PGS.Compass = {
 	init: function () {
 		$.mobile.loading('show');
-		navigator.compass.watchHeading(Compass.onSuccess, Compass.onError, Compass.options);
+		navigator.compass.watchHeading(PGS.Compass.onSuccess, PGS.Compass.onError, PGS.Compass.options);
 	},
 	onSuccess: function (heading) {
 		$.mobile.loading('hide');

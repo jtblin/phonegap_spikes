@@ -1,8 +1,10 @@
-var Image = {
+var PGS = PGS || {};
+
+PGS.Image = {
 	capture: function () {
 		// Launch device camera application,
 		// allowing user to capture one image
-		navigator.camera.getPicture(Image.captureSuccess, Image.captureError, Image.captureOptions);
+		navigator.camera.getPicture(Image.captureSuccess, PGS.Image.captureError, PGS.Image.captureOptions);
 	},
 	captureSuccess: function (imageUri) {
 		$('#smallImage').attr('src', imageUri);

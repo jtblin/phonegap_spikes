@@ -1,10 +1,7 @@
 function Position (coords, address) {
 	this.updateAddress = function (address){
 		this.address = address;
-	}
-	this.savePosition = function (coords) {
-		this.coords = coords;
-	}
+	};
 	this.coords = coords;
 	this.address = address;
 }
